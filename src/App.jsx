@@ -1,6 +1,6 @@
 import './App.scss'
-import { Footer } from './components/Footer'
-import { Navbar } from './components/Navbar'
+import { Footer } from './components/footer'
+import { Navbar } from './components/navbar'
 import { AppRouter } from './router'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Toaster } from 'sonner'
