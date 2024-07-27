@@ -6,6 +6,7 @@ import phoneIcon from '../../../../assets/icons/phone.svg'
 import timeIcon from '../../../../assets/icons/time.svg'
 import { ContentIconInfo } from '../ContentIconInfo'
 import { Button } from '../../../../components/Button'
+import { toast } from 'sonner'
 
 export const ContactUs = () => {
   const initialState = {
@@ -18,7 +19,22 @@ export const ContactUs = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault()
-    console.log(values)
+
+    if (
+      values.name.trim() === '' ||
+      values.email.trim() === '' ||
+      values.message.trim() === ''
+    ) {
+      toast('Algo salio mal', {
+        description: 'Todos los campos son requeridos.',
+      })
+      return
+    }
+
+    toast.success('!Gracias por tu mensaje', {
+      description: `Hola ${values.name}, tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo lo antes posible.`,
+    })
+
     reset()
   }
 
