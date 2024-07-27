@@ -69,3 +69,21 @@
     }
   }
 }
+
+@include tablet {
+  .burguer-item {
+    width: 100%;
+
+    &-image {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .burguer-item {
+    &-image {
+      width: 40%;
+    }
+  }
+}
