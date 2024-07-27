@@ -28,6 +28,12 @@
   }
 }
 
+.section-page-content__blur {
+  &::before {
+    background: none;
+  }
+}
+
 @include desktop {
   .section-page {
     padding: 0 3em;
