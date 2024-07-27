@@ -59,3 +59,11 @@
     }
   }
 }
+
+.c-button__alternative {
+  background-color: $primary-color;
+
+  &::after {
+    background: $primary-color;
+  }
+}
