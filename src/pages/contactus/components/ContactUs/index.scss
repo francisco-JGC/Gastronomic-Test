@@ -1,5 +1,7 @@
+@use '../../../../sass/index' as *;
+
 .contact-us {
-  width: 70%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     height: 420px;
-    width: 800px;
+    width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 
@@ -80,6 +82,48 @@
     textarea {
       resize: none;
       height: 100px;
+    }
+  }
+}
+
+@include tablet {
+  .contact-us {
+    width: 90%;
+    flex-direction: column;
+    gap: 2em;
+
+    &-content {
+      flex-direction: column;
+      width: 100%;
+
+      .info {
+        width: 100%;
+      }
+    }
+
+    .form {
+      width: 100%;
+    }
+  }
+}
+
+@include mobile {
+  .contact-us {
+    flex-direction: column-reverse;
+    width: 100%;
+
+    &-content {
+      flex-direction: column;
+      width: 100%;
+      height: max-content;
+
+      .info {
+        width: 100%;
+      }
+    }
+
+    .form {
+      width: 100%;
     }
   }
 }
