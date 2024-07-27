@@ -12,8 +12,8 @@ export const HomeSection = () => {
     <SectionPage className="home-section">
       <div className="home-section-text">
         <div className="home-section-text-content">
-          <h2>Prueba nuestra nueva</h2>
-          <h1>Hamburguesa</h1>
+          <h2>Prueba nuestras nuevas</h2>
+          <h1>Hamburguesas</h1>
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
