@@ -2,10 +2,34 @@ import './index.scss'
 import { ROUTES } from '../../configurations/router.conf'
 import { Link, NavLink } from 'react-router-dom'
 import { Button } from '../Button'
+import { useEffect, useState, useRef } from 'react'
 
 export const Navbar = () => {
+  const [showNavbar, setShowNavbar] = useState(true)
+  const prevScrollY = useRef(0)
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY
+
+    if (prevScrollY.current < currentScrollY && currentScrollY > 100) {
+      setShowNavbar(false)
+    } else {
+      setShowNavbar(true)
+    }
+
+    prevScrollY.current = currentScrollY
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${showNavbar ? 'navbar-show' : 'navbar-hide'}`}>
       <div className="navbar-logo">
         <Link to="/" className="navbar-link">
           Burguers.
