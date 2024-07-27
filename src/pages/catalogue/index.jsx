@@ -1,9 +1,10 @@
 import './index.scss'
+import { MenuSection } from '../home/components/MenuSection'
 
 export const CataloguePage = () => {
   return (
-    <div>
-      <h1>Catalogue Page</h1>
+    <div className="catalogue-page">
+      <MenuSection />
     </div>
   )
 }
