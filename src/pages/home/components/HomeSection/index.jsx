@@ -2,7 +2,10 @@ import './index.scss'
 import { SectionPage } from '../../../../components/LayoutSectionPage'
 import BurgerIMG from '../../../../assets/images/burguer-home.webp'
 import LazyImage from '../../../../components/LazyImage'
-import { Button } from '../../../../components/Button'
+import facebookIcon from '../../../../assets/icons/facebook.svg'
+import instagramIcon from '../../../../assets/icons/instagram.svg'
+import xIcon from '../../../../assets/icons/x.svg'
+import { Link } from 'react-router-dom'
 
 export const HomeSection = () => {
   return (
@@ -18,19 +21,32 @@ export const HomeSection = () => {
           </p>
         </div>
         <div>
-          <Button className="home-section-button" alternative>
+          <Link to={'/catalogue'} className="c-button c-button__alternative">
             Ver menú
-          </Button>
+          </Link>
         </div>
 
-        <div className="social-media"></div>
+        <div className="social-media">
+          <a href="#">
+            <img src={facebookIcon} alt="Facebook" />
+          </a>
+          <a href="#">
+            <img src={instagramIcon} alt="Instagram" />
+          </a>
+          <a href="#">
+            <img src={xIcon} alt="X" />
+          </a>
+        </div>
       </div>
-      <div>
+
+      <div className="home-section-image">
         <LazyImage
           src={BurgerIMG}
           alt="Burger"
-          className="home-section-image"
+          className="home-section-image-burguer"
         />
+
+        <div className="background-burguer"></div>
       </div>
     </SectionPage>
   )
