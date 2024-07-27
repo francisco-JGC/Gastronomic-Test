@@ -12,6 +12,10 @@
   position: relative;
   font-family: 'Poppins', sans-serif;
 
+  a {
+    color: #fff;
+  }
+
   &::after {
     content: '';
     position: absolute;
