@@ -1,0 +1,10 @@
+@use '../../sass/index' as *;
+
+footer {
+  text-align: center;
+
+  a {
+    font-weight: bold;
+    color: $primary-color;
+  }
+}
