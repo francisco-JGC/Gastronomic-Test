@@ -82,6 +82,13 @@
 
 @media (max-width: 500px) {
   .burguer-item {
+    &-info {
+      width: 90%;
+
+      p {
+        padding-left: 6em;
+      }
+    }
     &-image {
       width: 40%;
     }
