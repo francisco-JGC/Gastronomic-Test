@@ -51,8 +51,6 @@
     &-burguer {
       margin-right: 10em;
       object-fit: cover;
-      width: 500px;
-      height: 500px;
     }
 
     .background-burguer {
@@ -70,7 +68,6 @@
         position: absolute;
         top: 40%;
         right: calc(7% - 4.7em / 2);
-        transform: translate(-50%, -50%);
         transform: rotate(-90deg);
         font-size: 7em;
         font-weight: bold;
