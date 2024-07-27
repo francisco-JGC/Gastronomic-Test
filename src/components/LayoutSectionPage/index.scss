@@ -1,0 +1,47 @@
+@use '../../sass/index' as *;
+
+.section-page {
+  width: 100%;
+  padding: 2em 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-content {
+    width: 100%;
+    max-width: $max-width;
+    text-align: start;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 25%;
+      width: 20%;
+      z-index: -1;
+      height: 50px;
+      background: rgba($primary-color, 1);
+      filter: blur(80px);
+    }
+  }
+}
+
+@include desktop {
+  .section-page {
+    padding: 0 3em;
+  }
+}
+
+@include mobile {
+  .section-page {
+    padding: 0 1em;
+
+    &-content {
+      &::before {
+        filter: blur(45px);
+      }
+    }
+  }
+}
