@@ -1,0 +1,12 @@
+.menu-section {
+  background-color: #f8f8ec;
+  padding: 2em;
+
+  .menu-container {
+    padding: 3em 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+}
