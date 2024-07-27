@@ -1,6 +1,7 @@
 import './index.scss'
 import { ROUTES } from '../../configurations/router.conf'
 import { Link, NavLink } from 'react-router-dom'
+import { Button } from '../Button'
 
 export const Navbar = () => {
   return (
@@ -32,7 +33,7 @@ export const Navbar = () => {
       </ul>
 
       <div className="navbar-order">
-        <button>Ordenar Ahora</button>
+        <Button>Ordenar Ahora</Button>
       </div>
     </nav>
   )
